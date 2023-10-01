@@ -3,29 +3,43 @@
 import random
 rand_o=random.randint(1,2)
 rand_toss=random.randint(1,2)
+
+
 print("\n >>>>>>>>>------ BOOK CRICKET------>>>>>>>>>\n")
 
 print("""\nWe all have played that book cricket game in our childhood. This game works just like that. Play it and relive your childhood.
       """)
-
-
-
 #start
-a=input("\n \n Press 's' to start this game__").lower()
+a=input("\n \nPress 's' to start this game\n").lower()
 
 
-#toss
+#toss and team declaration
   
 if 's' in a:
+    u=" "
+    c=" "
+    u=input("\nEnter the name of your team : \n").upper()
+    u_batsman1=input("Enter the name of batsman 1 : \n").upper()
+    u_batsman2=input("Enter the name of batsman 2 : \n").upper()           
+    u_bowler1=input("Enter the name of bowler 1 : \n").upper()
+    u_bowler2=input("Enter the name of bowler 2 : \n").upper()
     
-    u=input("Enter the name of your team : ")
-    c=input("Enter the team whom you wish to defeat: ")
-    print(f"\nYour team is {u} and computer is playing with team {c}  ")
+    
+
+    c="WORLD XI" 
+    print(f"\nYour team is {u} and computer is playing with team {c} \n ")      
+    print(f"\n>Your team have {u_batsman1} and {u_batsman2} as Batsman , {u_bowler1} and {u_bowler2} as Bowlers\n")
+
+    c_batsman1=(random.choice(('Steve Waugh','Virendra Sehwag','Sachin Tendulkar'))).upper()
+    c_batsman2=(random.choice(("Ricky Ponting","Ms Dhoni","Jaque kallis"))).upper()
+    c_bowler1=(random.choice(("Glenn McGrath","Dale Steyn","Brett lee"))).upper()
+    c_bowler2=(random.choice(("Harbhajan Singh","Mutiah Mulitharan","Shane Warne"))).upper()
+    print(f"\n>{c} have {c_batsman1} and {c_batsman2} as Batsman , {c_bowler1} and {c_bowler2} as Bowlers\n")
+
     print("\n")
 
     Toss=False
-    u=" "
-    c=" "
+  
     toss=input("Here comes the toss.\nChoose 'head' or 'tail' : \n").lower()
     if "head" in toss and rand_toss==1:
                print("Congratulations!You won the toss.")  
@@ -43,23 +57,30 @@ if 's' in a:
     if Toss==True:
       a=input("Choose what you want to do : Batting or Bowling \n").lower()
       if 'batting' in a:
-           print("You are batting first.")
+           print("\nYou are batting first.\n")
+         
            
       elif 'bowling' in a:
-              print("You are bowling first")
-      
+              print("\nYou are bowling first\n")
+              
     else:
         if rand_o==1:
-                print("Opposition is batting")
+                print("\nOpposition is batting\n")
+                
                 
         elif rand_o==2:
-                print("Opposition is bowling")
-     
+                print("\nOpposition is bowling\n")
+                
     
-    
+
+
            
     print("\n")
-    print("_____FIRST INNINGS BEGIN_____\n")
+    print("******************************")
+    print("_____FIRST INNINGS BEGIN_____")
+    print("******************************")
+
+
     runs1=0
     wickets1=0
     balls1=0
@@ -70,6 +91,10 @@ if 's' in a:
                   print(f"\nYour input was {user} and computer goes with {comp} ")
                   if user == comp:
                         wickets1+=1
+                        print("-------------------------------------")
+                        print("\n!!!OUT!!!\nAnother Batsman on Strike\n")
+                        print("-------------------------------------")
+                        
                   else:
                     if "batting" in a or rand_o==2:
                            Bat_first=u
@@ -81,10 +106,16 @@ if 's' in a:
                            runs1+=comp 
            print(f"\nScore={runs1}/{wickets1}")
            balls1+=1
+           
            if balls1==6:
+                         print("-------------------------------------")
                          print("Over 1 completed")
+                         print("Bowler Changes")
+                         print("-------------------------------------")
            elif balls1==12:
+                         print("-------------------------------------")
                          print("Over 2 completed")
+                         print("-------------------------------------")
            print("Balls remaining: ",12-balls1)
     print("\nFinal Score: \n")        
     print("Runs=",runs1)
@@ -92,14 +123,16 @@ if 's' in a:
     
                        
            
-    print(f"\nThe Score of {Bat_first} is {runs1}, wickets lost were {wickets1} in {balls1} balls")       
-                  
+    print(f"\nThe Score of {Bat_first} is {runs1}, wickets lost were {wickets1} in {balls1} balls\n")       
+    print("-------------------------------------")
     print("_____END OF FIRST INNINGS_____")
-    print(f"\n{Ball_first} needs {runs1} in 12 balls with 2 wickets in hand")
+    print("-------------------------------------")
+    print(f"\n{Ball_first} needs {runs1} in 12 balls with 2 wickets in hand\n")
     
          
-
-    print("\n_____SECOND INNINGS BEGIN_____")
+    print("*********************************")
+    print("_____SECOND INNINGS BEGIN_____")
+    print("**********************************")
     runs2=0
     wickets2=0
     balls2=0
@@ -110,6 +143,9 @@ if 's' in a:
                   print(f"\nYour input was {user} and computer goes with {comp} ")
                   if user == comp:
                         wickets2+=1
+                        print("-------------------------------------")
+                        print("\n!!!OUT!!!\nAnother Batsman on Strike\n")
+                        print("-------------------------------------")
                   else:
                     if "batting" in a or rand_o==2:
                            Bat_second=c
@@ -121,10 +157,16 @@ if 's' in a:
                            runs2+=user 
            print(f"\nScore={runs2}/{wickets2}")
            balls2+=1
+           
            if balls2==6:
+                         print("-------------------------------------")
                          print("Over 1 completed")
+                         print("Bowler changes")
+                         print("-------------------------------------")
            elif balls2==12:
+                         print("-------------------------------------")
                          print("Over 2 completed")
+                         print("-------------------------------------")
            print("Balls remaining: ",12-balls2)
            
            if runs2 <= runs1 and balls2 <= 11 and wickets2 != 2:
@@ -137,9 +179,10 @@ if 's' in a:
     
                        
            
-    print(f"\nThe Score of {Bat_second} is {runs2}, wickets lost were {wickets2} in {balls2} balls")       
-                  
-    print("\n_____END OF SECOND INNINGS_____")
+    print(f"\nThe Score of {Bat_second} is {runs2}, wickets lost were {wickets2} in {balls2} balls\n")       
+    print("-------------------------------------")              
+    print("_____END OF SECOND INNINGS_____")
+    print("-------------------------------------")
     
     print("\n     ______RESULT______     \n")
 
@@ -157,7 +200,7 @@ if 's' in a:
         print(f" Congratulations! {u} won the Match by {2 - wickets2} wickets.")
  
      else:
-        print(f" Better luck next time! The {c} won the Match by{2 - wickets2} wickets.")
+        print(f" Better luck next time! The {c} won the Match by {2 - wickets2} wickets.")
  
     else:
       print("The Match is a Tie.","\nNo one Wins.")
