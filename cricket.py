@@ -17,8 +17,13 @@ a=input("\n \n Press 's' to start this game__").lower()
 #toss
   
 if 's' in a:
-    Toss=False
     
+    u=input("Enter the name of your team : ")
+    c=input("Enter the team whom you wish to defeat: ")
+    print(f"\nYour team is {u} and computer is playing with team {c}  ")
+    print("\n")
+
+    Toss=False
     u=" "
     c=" "
     toss=input("Here comes the toss.\nChoose 'head' or 'tail' : \n").lower()
@@ -33,31 +38,27 @@ if 's' in a:
                Toss=False
 
 
-    Team=False
+   
+
     if Toss==True:
       a=input("Choose what you want to do : Batting or Bowling \n").lower()
       if 'batting' in a:
            print("You are batting first.")
-           Team=True
+           
       elif 'bowling' in a:
               print("You are bowling first")
-      else:
-            Team=True
+      
     else:
         if rand_o==1:
                 print("Opposition is batting")
-                Team=True
+                
         elif rand_o==2:
                 print("Opposition is bowling")
-                Team=True
+     
     
-    if Team==True:
-           u=input("Enter the name of your team : ")
+    
            
-           c=input("Enter the team whom you wish to defeat: ")
-           print(f"\nYour team is {u} and computer is playing with team {c}  ")
     print("\n")
-
     print("_____FIRST INNINGS BEGIN_____\n")
     runs1=0
     wickets1=0
@@ -156,7 +157,7 @@ if 's' in a:
         print(f" Congratulations! {u} won the Match by {2 - wickets2} wickets.")
  
      else:
-        print(f" Better luck next time! The Computer won the Match by{2 - wickets2} wickets.")
+        print(f" Better luck next time! The {c} won the Match by{2 - wickets2} wickets.")
  
     else:
       print("The Match is a Tie.","\nNo one Wins.")
