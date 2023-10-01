@@ -1,11 +1,26 @@
+print("\n >>>>>>>>>------ BOOK CRICKET------>>>>>>>>>\n")
+print(""" 
  
-
+Instructions:
+ 
+1. You have to select any random number from 1 to 6.
+2. The computer will also select a number.
+3. While batting, if the number selected by you and computer is different, then your number will add to your runs.
+   If the number selected by you and computer is same, then you will lose your wicket.
+4. While bowling, if the number selected by you and computer is different, then the computer's number will add to its runs.
+   If the number selected by you and computer is same, then the computer will lose its wicket.
+5. Each player will get 2 wickets and 2 overs (12 balls) for batting and bowling.
+6. The innings will end after either the three wickets fell or the overs end.
+7. The player with maximum runs wins. """)
+ 
+print("\n---------- Start Game ----------")
+ 
 import random
 rand_o=random.randint(1,2)
 rand_toss=random.randint(1,2)
 
 
-print("\n >>>>>>>>>------ BOOK CRICKET------>>>>>>>>>\n")
+
 
 print("""\nWe all have played that book cricket game in our childhood. This game works just like that. Play it and relive your childhood.
       """)
