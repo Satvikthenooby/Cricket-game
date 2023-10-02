@@ -1,3 +1,6 @@
+import time
+
+
 print("\n >>>>>>>>>------ BOOK CRICKET------>>>>>>>>>\n")
 print(""" 
  
@@ -221,22 +224,10 @@ if 's' in a:
       print("The Match is a Tie.","\nNo one Wins.")
  
 
-
-
-    
-
-
-
     
 else:
         print("Sorry,You entered wrong input!")
 
 
-
-x=input("")#using so that terminal stay awake always
-
-
-
-
-
+time.sleep(60)
     
