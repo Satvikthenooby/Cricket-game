@@ -176,31 +176,26 @@ class Score():
  
         else:
          print("The Match is a Tie.","\nNo one Wins.")
-                
 
-     
-     
-
-
-
+#playerinputs
 yourteam=input("\nEnter the name of your team : \n").upper()
 name=input("\nEnter your name : \n").upper()
 player2=input("\nEnter Second player's name : \n").upper()
 player3=input("\nEnter third player's name : \n").upper()
 player4=input("\nEnter fourth player's name : \n").upper()
 
+#opposition players
 op1=(random.choice(('Steve Waugh','Virendra Sehwag','Sachin Tendulkar'))).upper()
 op2=(random.choice(("Ricky Ponting","Ms Dhoni","Shane Warne"))).upper()
 op3=(random.choice(("Glenn McGrath","Dale Steyn","Brett lee"))).upper()
 op4=(random.choice(("Harbhajan Singh","Mutiah Mulitharan","Jaque kallis"))).upper()
 
+#toss input
 toss=input("****Its Toss time****\n \nChoose Heads or Tails\n").lower()
-
 team=Team(yourteam,name,player2,player3,player4,op1,op2,op3,op4)
-
 t=Toss(toss) 
 score=input("_")
 sc=Score(score,yourteam)
 
 
-x=input("  ")
+x=input("  ")#to keep screen awake
