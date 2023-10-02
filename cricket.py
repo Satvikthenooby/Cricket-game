@@ -1,3 +1,4 @@
+import time
 print("\n >>>>>>>>>------ BOOK CRICKET------>>>>>>>>>\n")
 print(""" 
  
@@ -31,8 +32,6 @@ a=input("\n \nPress 's' to start this game\n").lower()
 #toss and team declaration
   
 if 's' in a:
-    u=" "
-    c=" "
     u=input("\nEnter the name of your team : \n").upper()
     u_batsman1=input("Enter the name of batsman 1 : \n").upper()
     u_batsman2=input("Enter the name of batsman 2 : \n").upper()           
@@ -66,14 +65,10 @@ if 's' in a:
                print("Opponent won the toss.")
                Toss=False
 
-
-   
-
     if Toss==True:
       a=input("Choose what you want to do : Batting or Bowling \n").lower()
       if 'batting' in a:
            print("\nYou are batting first.\n")
-         
            
       elif 'bowling' in a:
               print("\nYou are bowling first\n")
@@ -81,20 +76,14 @@ if 's' in a:
     else:
         if rand_o==1:
                 print("\nOpposition is batting\n")
-                
-                
+         
         elif rand_o==2:
                 print("\nOpposition is bowling\n")
-                
-    
-
-
-           
+             
     print("\n")
     print("******************************")
     print("_____FIRST INNINGS BEGIN_____")
     print("******************************")
-
 
     runs1=0
     wickets1=0
@@ -136,15 +125,12 @@ if 's' in a:
     print("Runs=",runs1)
     print("wickets=",wickets1)
     
-                       
-           
     print(f"\nThe Score of {Bat_first} is {runs1}, wickets lost were {wickets1} in {balls1} balls\n")       
     print("-------------------------------------")
     print("_____END OF FIRST INNINGS_____")
     print("-------------------------------------")
     print(f"\n{Ball_first} needs {runs1} in 12 balls with 2 wickets in hand\n")
-    
-         
+     
     print("*********************************")
     print("_____SECOND INNINGS BEGIN_____")
     print("**********************************")
@@ -187,12 +173,9 @@ if 's' in a:
            if runs2 <= runs1 and balls2 <= 11 and wickets2 != 2:
              print(f"{Bat_second} needs {runs1-runs2 +1} run to win in {12-balls2} balls")
 
-
     print("\nFinal Score: \n")        
     print("Runs=",runs2)
-    print("wickets=",wickets2)
-    
-                       
+    print("wickets=",wickets2)      
            
     print(f"\nThe Score of {Bat_second} is {runs2}, wickets lost were {wickets2} in {balls2} balls\n")       
     print("-------------------------------------")              
@@ -219,24 +202,8 @@ if 's' in a:
  
     else:
       print("The Match is a Tie.","\nNo one Wins.")
- 
-
-
-
-    
-
-
-
     
 else:
         print("Sorry,You entered wrong input!")
 
-
-
-x=input("")#using so that terminal stay awake always
-
-
-
-
-
-    
+time.sleep(60) # Keeping the terminal awake for 1 min
