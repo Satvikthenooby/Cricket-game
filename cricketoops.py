@@ -127,7 +127,7 @@ class Score():
                     run2+=comp
 
                   elif "s" in self.who or "d" in self.who:
-                    Bat_second=computer
+                    Bat_second=self.playerteam
                     run2+=user
                     
             print(f"\nScore={run2}/{wickets2}")
@@ -161,7 +161,7 @@ class Score():
         if run1 > run2:
  
           if Bat_first ==self.playerteam : 
-           print(f" Congratulations! {self.player} won the Match by {run1 - run2} runs.")
+           print(f" Congratulations! {self.playerteam} won the Match by {run1 - run2} runs.")
  
           else:
            print(f" Better luck next time! The WORLD XI won the Match by {run1 - run2} runs.") 
